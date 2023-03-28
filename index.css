@@ -6,9 +6,14 @@
 body  {
     font-family:  'Nunito',  sans-serif;
     color:  #384047;
-    background-image: url('https://images.unsplash.com/photo-1542888743-a0323a8bd3df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=929&q=80');
+    /* background-image: url('https://images.unsplash.com/photo-1542888743-a0323a8bd3df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=929&q=80'); */
+    /* Red laser */
+    background-image: url('https://images.unsplash.com/photo-1524169113253-c6ba17f68498?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80');
+    /* background-image: url('https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80'); */
     background-position:  0px 0px;
     background-repeat:  repeat;
+    /* background-repeat:  no-repeat;
+    background-size: cover; */
     animation:  animatedBackground 90s linear infinite;
     opacity: 0.9;
 }
@@ -24,7 +29,8 @@ form  {
     max-width:  300px;
     margin:  10px auto;
     padding:  10px 20px;
-    background:  #f4f7f8;
+    /* background:  #f4f7f8; */
+    background-image: linear-gradient(45deg, #98c9df, #ec8f8f, #CAD5E2);
     border-radius:  8px;
 }
 
@@ -35,7 +41,7 @@ a{
 	font-size:26px;
 }
 
-h1,h2,h4  {
+h1,h2,h4,h5  {
     margin:  0 0 30px 0;
     text-align:  center;
     font-family: 'Nunito',  sans-serif;
@@ -120,4 +126,42 @@ label.light  {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+#about{
+    cursor: pointer;
+    color: #00527c;
+}
+.hidden{
+    /* display: none; */
+    opacity: 0;
+    height: 0;
+    transition:  height 1s ease, opacity 0.1s ease;
+    position: absolute;
+    top: -200rem;
+}
+.visible{
+    /* display: block; */
+    opacity: 1;
+    height: fit-content;
+    transition: opacity 1.5s ease-in-out, height 1s ease;
+    position: relative;
+}
+.arrow {
+    border: solid #00527c;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+}
+.up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+#submit{
+    font-size: larger;
+    letter-spacing: 3px;
 }

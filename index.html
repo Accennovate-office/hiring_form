@@ -13,13 +13,19 @@
   method="POST" 
   action="https://script.google.com/macros/s/AKfycbydRgmXiisuIEZmVFy-2deqMYLpii8VqL7M-I8Ad9M_tVbm0pr_-ymjxGhdff5n_UWGIA/exec"
 >
-  <h1>Hiring Form</h1> 
+  <h3 align="center" style="margin: 0;" ><img src="./job.png" alt="We are hiring" width="60"></h3>
+  <h1>Job Application</h1> 
   <div id="logo">
     <img align="center" src="./Accennovate_logo_4.png" alt="Accennovate Logo" width="130">
   </div>
-  <h4>Accennovate Tech Solutions Pvt. Ltd.</h4><br><br>
+  <h4 style="margin:0;">Accennovate Tech Solutions Pvt. Ltd.</h4><br>
 
-  <fieldset>
+  <h4 style="margin:0;" id="about" onclick="showAbout()">About us &nbsp;<span class="arrow down"></span></h4>
+  <p class="hidden">Accennovate Tech Solutions is a business solutions provider and innovator. With its acclaimed products and services, strong emphasis on R & D and a richly experienced workforce, Accennovate has expanded across various domains like Artificial Intelligence, IoT, Cloud Computing, etc.</p>
+  <p class="hidden">Since its inception, Accennovate has ensured that its products not only include state-of-the-art technology but are also feature-rich built through extensive research. This has earned Accennovate partnerships and alliances from major business organizations.</p>
+  <p class="hidden">As an IT solutions provider with multi-domain expertise, Accennovate's consulting services and skillsets are backed by a vast knowledge-base and a keen understanding of what it takes to run and grow a business. Accennovate is recognized for re-engineering business processes, optimizing resources, developing and deploying user-friendly, cost-efficient and industry-specific solutions.</p>
+  <br><br>
+  <fieldset style="z-index: 3;">
     <label for="event_select_for">Applying for position:</label>
     <select id="event_select" name="Position" required>
       <option value="">Select Position</option>
@@ -32,7 +38,13 @@
   </fieldset>
 
   <fieldset>
-    <legend><span class="number">1</span>Enter Your Details</legend>
+    <legend style="vertical-align: middle;">
+      <!-- <span class="number"></span> -->
+      <img src="./bullet.png" alt="bullet" width="20" style="vertical-align: middle;">
+      <span style="vertical-align: middle;margin-top: 2px;">
+        Enter Your Details
+      </span>
+    </legend>
     <label for="Firstname">First Name:</label>
     <input name="Firstname" type="text" placeholder="" required>
     <label for="Lastname">Last Name:</label>
@@ -42,19 +54,25 @@
     <label for="Whatsapp">Whatsapp Number:</label>
     <input name="Whatsapp Number" type="number" placeholder="" required>
     <label for="Email">Email ID:</label>
-    <input name="Email" type="email" placeholder="" required>
-  </fieldset>
-
-  <fieldset>
-    <legend><span class="number">2</span>Enter College Details</legend>
-    <label for="College">College Name:</label>
-    <input name="College" type="text" placeholder="" required>
-    <label for="Address">Address:</label>
+    <input name="Email" type="email" placeholder="" required><label for="Address">Address:</label>
     <textarea id="Address" name="Address"></textarea>
     <label for="City">City:</label>
     <input name="City" type="text" placeholder="" required>
     <label for="Pincode">Pincode:</label>
     <input name="Pincode" type="number" placeholder="" required>
+  </fieldset>
+
+  <fieldset>
+    <!-- <legend><span class="number">2</span>Enter College Details</legend> -->
+    <legend style="vertical-align: middle;">
+      <!-- <span class="number"></span> -->
+      <img src="./bullet.png" alt="bullet" width="20" style="vertical-align: middle;">
+      <span style="vertical-align: middle;margin-top: 2px;">
+        Enter College Details
+      </span>
+    </legend>
+    <label for="College">College Name:</label>
+    <input name="College" type="text" placeholder="" required>
     <label for="event_select_for">Stream of specialization:</label>
     <select id="event_select" name="Stream" required>
       <option value="">Select Stream</option>   
@@ -63,12 +81,28 @@
       <option value="BSc in Computer Science">BSc in Computer Science</option>
       <option value="BSc in IT">BSc in IT</option>
       <option value="MSc">MSc</option>   
-      <option value="MCA">MCA</option>   
+      <option value="MCA">MCA</option> 
+      BCom, MCom, BMS, Other
     </select>
   </fieldset>
 
-  <button type="submit" id="submit">Submit</button>
+  <button type="submit" id="submit">SUBMIT</button>
 </form>
+
+<script>
+  function showAbout() {
+    var content = document.getElementsByTagName('p')
+    content[0].classList.toggle("hidden");
+    content[0].classList.toggle("visible");
+    content[1].classList.toggle("hidden");
+    content[1].classList.toggle("visible");
+    content[2].classList.toggle("hidden");
+    content[2].classList.toggle("visible");
+    document.getElementsByClassName('arrow')[0].classList.toggle('up')
+    document.getElementsByClassName('arrow')[0].classList.toggle('down')
+    
+  }
+</script>
 
 </body>
 </html>
