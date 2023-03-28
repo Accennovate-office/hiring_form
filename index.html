@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <title>Accennovate Hiring Form</title>
+</head>
+<body>
+  <form
+  method="POST" 
+  action="https://script.google.com/macros/s/AKfycbydRgmXiisuIEZmVFy-2deqMYLpii8VqL7M-I8Ad9M_tVbm0pr_-ymjxGhdff5n_UWGIA/exec"
+>
+  <h1>Hiring Form</h1> 
+  <div id="logo">
+    <img align="center" src="./Accennovate_logo_4.jpg" alt="Accennovate Logo" width="130">
+  </div>
+  <h4>Accennovate Tech Solutions Pvt. Ltd.</h4><br><br>
+
+  <fieldset>
+    <label for="event_select_for">Applying for position:</label>
+    <select id="event_select" name="Position" required>
+      <option value="">Select Position</option>
+      <option value="IT Trainer">IT Trainer</option>
+      <option value="Sales and Marketing Executive">Sales and Marketing Executive</option>
+      <option value="HR">HR (Human resources)</option>
+      <option value="Accountant">Accountant</option>
+      <option value="Quality Manager">Quality Manager</option>   
+    </select>
+  </fieldset>
+
+  <fieldset>
+    <legend><span class="number">1</span>Enter Your Details</legend>
+    <label for="Firstname">First Name:</label>
+    <input name="Firstname" type="text" placeholder="" required>
+    <label for="Lastname">Last Name:</label>
+    <input name="Lastname" type="text" placeholder="" required>
+    <label for="Contact">Contact:</label>
+    <input name="Contact" type="number" placeholder="" required>
+    <label for="Whatsapp">Whatsapp Number:</label>
+    <input name="Whatsapp Number" type="number" placeholder="" required>
+    <label for="Email">Email ID:</label>
+    <input name="Email" type="email" placeholder="" required>
+  </fieldset>
+
+  <fieldset>
+    <legend><span class="number">2</span>Enter College Details</legend>
+    <label for="College">College Name:</label>
+    <input name="College" type="text" placeholder="" required>
+    <label for="Address">Address:</label>
+    <textarea id="Address" name="Address"></textarea>
+    <label for="City">City:</label>
+    <input name="City" type="text" placeholder="" required>
+    <label for="Pincode">Pincode:</label>
+    <input name="Pincode" type="number" placeholder="" required>
+    <label for="event_select_for">Stream of specialization:</label>
+    <select id="event_select" name="Stream" required>
+      <option value="">Select Stream</option>   
+      <option value="BE in Computer Science">BE in Computer Science</option>
+      <option value="BE in IT">BE in IT</option>
+      <option value="BSc in Computer Science">BSc in Computer Science</option>
+      <option value="BSc in IT">BSc in IT</option>
+      <option value="MSc">MSc</option>   
+      <option value="MCA">MCA</option>   
+    </select>
+  </fieldset>
+
+  <button type="submit" id="submit">Submit</button>
+</form>
+
+</body>
+</html>
